@@ -7,7 +7,7 @@
 - name: Play2
   hosts: all
   tasks:
-    - name: Create an empty file
+    - name: Create an empty file in remote node
       file:
         path: /tmp/demo
         state: touch

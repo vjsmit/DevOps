@@ -5,8 +5,8 @@
       package:
         name: httpd
         state: present
-
+ 
     - name: Start httpd
-      Service:
-          name: httpd
-          state: started
+      package:
+        name: httpd
+        state: started

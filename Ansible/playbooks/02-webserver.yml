@@ -1,12 +1,12 @@
-- name: Install web server
-  hosts: all
+- name: Install Web Server 
+  hosts: all 
   tasks:
-    - name: Install Web Server
+    - name: Install Web Server 
       package:
         name: httpd
         state: present
- 
-    - name: Start httpd
+
+    - name: Start httpd 
       service:
-        name: httpd
-        state: started
+        name: httpd 
+        state: started 

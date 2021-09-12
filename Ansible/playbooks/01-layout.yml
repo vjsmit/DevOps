@@ -3,3 +3,8 @@
   tasks:
     - name: Ping
       ping: 
+    - name: Create an empty file
+      file:
+        path: /tmp/demo
+        state: touch
+

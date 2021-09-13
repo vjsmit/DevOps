@@ -3,5 +3,5 @@
   tasks:
     - name: Print URL
       debug:
-        msg: "URL is {{URL}}"
+        msg: "URL = {{URL}}"
   

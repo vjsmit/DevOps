@@ -1,0 +1,7 @@
+- name: Print vars from cli
+  hosts: all
+  tasks:
+    - name: Print URL
+      debug:
+        msg: "URL is {{URL}}"
+  

@@ -1,12 +1,11 @@
 - name: print variable using var-prompt
   hosts: all
   vars_prompt:
-
-    - name: URL
-      prompt: Enter URL
-      private: no
-
+    - prompt: Enter URL
+      name: URL
   tasks:
     - name: print var-prompt
       debug:
         msg: "URL = {{URL}}"
+
+

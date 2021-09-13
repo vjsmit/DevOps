@@ -2,7 +2,7 @@
   hosts: all
   vars_prompt:
     prompt: Enter URL
-    - name: URL
+  - name: URL
   tasks:
     - name: print var-prompt
       debug:

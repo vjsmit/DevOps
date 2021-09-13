@@ -1,2 +1,5 @@
-node1.devops1.int
+node1.devops1.int URL=host.google.com
 #node2.devops1.int
+
+#[all:vars]
+#URL=group.google.com

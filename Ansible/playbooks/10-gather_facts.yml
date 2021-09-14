@@ -3,4 +3,8 @@
   tasks:
     - name: Print ansible_machine
       debug:
-        msg: "Architecture - {{ansible_python_version}}"
+        msg: "Python version - {{ansible_python_version}}"
+
+    - name: Print facts from node1
+      debug:
+        msg: "{{ansible_local.demo.URL}}"

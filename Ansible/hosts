@@ -2,4 +2,4 @@ node1.devops1.int
 #node2.devops1.int
 
 #[all:vars]
-#URL=group.google.com
+URL=group.google.com

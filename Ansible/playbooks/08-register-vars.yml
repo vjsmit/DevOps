@@ -7,4 +7,4 @@
 
     - name: Print abc var
       debug:
-        msg: "{{abc}}"
+        msg: "{{abc.start}}"

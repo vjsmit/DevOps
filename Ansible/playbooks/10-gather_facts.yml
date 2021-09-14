@@ -3,4 +3,4 @@
   tasks:
     - name: Print ansible_machine
       debug:
-        msg: "Architecture - {{ansible_machine}}"
+        msg: "Architecture - {{ansible_python_version}}"

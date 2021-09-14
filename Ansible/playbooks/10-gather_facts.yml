@@ -1,0 +1,6 @@
+- name: Print gather fact variables
+  hosts: all
+  tasks:
+    - name: Print ansible_machine
+      debug:
+        msg: "Architecture - {{ansible_machine}}"

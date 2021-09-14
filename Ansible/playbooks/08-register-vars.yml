@@ -1,0 +1,10 @@
+- name: Register a variable from output of one task
+  hosts: all
+  tasks:
+    - name: Get uptime
+      shell: uptime
+      register: abc
+
+    - name: Print abc var
+      debug:
+        msg: "{{abc}}"

@@ -6,7 +6,7 @@
       register: OUT
 
     - name: Define a variable
-      set_facts:
+      set_fact:
         UPTIME: "{{OUT.stdout}}"
     
     - name: Print UPTIME variable

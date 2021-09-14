@@ -1,7 +1,7 @@
 - name: vars from task and play
   hosts: all
-  vars:
-    URL: "play.google.com"
+  #vars:
+   # URL: "play.google.com"
   tasks:
     - name: print from task
       debug:

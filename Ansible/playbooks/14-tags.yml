@@ -1,5 +1,6 @@
 - name: demo on tags
   hosts: all
+  gather_facts: no
   tasks:
     - name: Print one if tag one is given
       debug:

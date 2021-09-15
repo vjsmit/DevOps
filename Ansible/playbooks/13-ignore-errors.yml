@@ -2,9 +2,9 @@
   hosts: all
   tasks:
     - name: check dpkg cmd
-      command: which rpm
+      command: which dpkg
       register: out
-      when: ansible_distribution == "Ubuntu"
+      #when: ansible_distribution == "Ubuntu"
 
     - name: find kernel rpm version
       shell: dpkg --list | grep kernel

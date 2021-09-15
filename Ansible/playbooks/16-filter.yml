@@ -6,5 +6,9 @@
       register: out
 
     - name: Fetch the load value
-      debug:
-        msg: "{{out.stdout.split()[-3].split('.')[0]}}"
+      set_fact:
+        LOAD: "{{out.stdout.split()[-3].split('.')[0]}}"
+
+    - name: send an email
+      command: curl ....
+      when: LOAD > 5

@@ -1,0 +1,20 @@
+- name: demo on tags
+  hosts: all
+  tasks:
+    - name: Print one if tag one is given
+      debug:
+        msg: one
+      tags:
+        - one
+
+    - name: Print two if tag 2 is given
+      debug:
+        msg: two
+      tags:
+        - two
+
+    - name: Print three if tag 3 is given
+      debug:
+        msg: three
+      tags:
+        - three

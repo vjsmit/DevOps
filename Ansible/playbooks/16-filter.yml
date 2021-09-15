@@ -1,0 +1,10 @@
+- name: Demo on Print load
+  hosts: all
+  task:
+    - name: Print avg load
+      command: uptime
+      register: out
+
+    - name: Fetch the load value
+      debug:
+        msg: "{{out.stdout}}"

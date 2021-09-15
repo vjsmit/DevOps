@@ -7,4 +7,4 @@
 
     - name: Fetch the load value
       debug:
-        msg: "{{out.stdout.split()[-3].split(.)[0]}}"
+        msg: "{{out.stdout.split()[-3]}}"

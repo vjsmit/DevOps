@@ -11,4 +11,4 @@
 
     - name: send an email
       command: curl ....
-      when: LOAD > 5
+      when: LOAD > "5"

@@ -1,6 +1,6 @@
 - name: Demo on Print load
   hosts: all
-  task:
+  tasks:
     - name: Print avg load
       command: uptime
       register: out

@@ -3,8 +3,8 @@
   tasks:
     - name: Check rpm command is there or not
       command: which rpm
-      when: ansible_distribuition == "Centos"
+      when: ansible_distribution == "Centos"
 
     - name: check dpkg cmd is there or not
       command: which dpkg
-      when: ansible_distribuition == "Ubuntu"
+      when: ansible_distribution == "Ubuntu"

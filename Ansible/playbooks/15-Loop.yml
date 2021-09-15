@@ -1,7 +1,8 @@
 - name: Demo on loops
   hosts: all
+  gather_facts: no
   tasks:
-    #- name: Print Hello
+    - name: Print Hello
       debug:
         msg: "Hello, {{item}}"
       loop:
@@ -9,4 +10,11 @@
         - Aam
         - Sam
         - Pam
+
+    - name: Print group of items
+      debug:
+        msg: "{{item}}"
+      loop:
+        - ["One", "Two"]
+        - ["Smit", "Vijay"]
 

@@ -13,7 +13,7 @@
 
     - name: Print group of items
       debug:
-        msg: "{{item}}"
+        msg: "Hello, {{item[0]}} & Hello, {{item[1]}}"
       loop:
         - ["One", "Two"]
         - ["Smit", "Vijay"]

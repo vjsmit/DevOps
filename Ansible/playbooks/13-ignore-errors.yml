@@ -4,7 +4,7 @@
     - name: check dpkg cmd
       command: which dpkg
       register: out
-      #when: ansible_distribution == "Ubuntu"
+      when: ansible_distribution == "Ubuntu"
 
     - name: find kernel rpm version
       shell: dpkg --list | grep kernel

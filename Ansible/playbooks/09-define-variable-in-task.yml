@@ -1,4 +1,4 @@
-- name: Demo on var declaration
+- name: Demo on var declaration inside a task
   hosts: all
   tasks:
     - name: Get Uptime

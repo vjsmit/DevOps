@@ -7,4 +7,4 @@
 
     - name: Print facts from node1
       debug:
-        msg: 
+        msg: "{{ansible_local}}"

@@ -1,0 +1,4 @@
+- name: Install web-server abd app-server
+  hosts: all
+  roles:
+    - webserver

@@ -1,4 +1,3 @@
-- name: Demo on roles
-  hosts: all
+- name: Print Hello from sample role
   debug:
-    msg: "Hello from sample role!"
+    msg: "Hello from sample role"

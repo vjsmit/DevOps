@@ -45,7 +45,7 @@ Print "Add the repository"
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key &>>/tmp/jinstall.log
 stat $?
 
-Print "Install the latest stable version of Jenkins"
+Print "Install Jenkins"
 sudo yum install jenkins -y &>>/tmp/jinstall.log
 stat $?
 

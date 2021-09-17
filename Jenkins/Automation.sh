@@ -57,7 +57,7 @@ Print "Start the Jenkins service"
 sudo systemctl start jenkins &>>/tmp/jinstall.log
 stat $?
 
-echo -e "\e[32m Jenkins Installation Success\e[0m"
+Head "Jenkins Installation Successful"
 
 
 

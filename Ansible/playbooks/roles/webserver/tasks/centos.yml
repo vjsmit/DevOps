@@ -1,3 +1,4 @@
 - name: Install web-server
-  debug:
-    msg: "Hello from centOS"
+  package:
+        name: httpd
+        state: present

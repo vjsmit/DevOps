@@ -37,7 +37,7 @@ Print "Install Java"
 yum install java -y  &>/tmp/jinstall.log
 stat $?
 
-Print "Enable the Jenkins repository"
+Print "Enable Jenkins repo"
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo &>>/tmp/jinstall.log
 stat $?
 

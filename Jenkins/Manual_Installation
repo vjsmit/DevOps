@@ -1,0 +1,26 @@
+Steps to install Jenkins:
+
+1) Jenkins is a Java application, so the first step is to install Java. 
+    sudo yum install java -y 
+
+2) The next step is to enable the Jenkins repository:
+
+    $ sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    
+3) And add the repository to your system with:
+
+    $ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    
+4) Once the repository is enabled, install the latest stable version of Jenkins by typing:
+    $ sudo yum install jenkins -y 
+    
+5) After the installation process is completed, start the Jenkins service with:
+    $ sudo systemctl start jenkins
+    
+6) To check whether it started successfully run:
+    $ systemctl status jenkins
+    
+7)  Finally enable the Jenkins service to start on system boot:
+    $ sudo systemctl enable jenkins
+
+

@@ -9,5 +9,6 @@
 
 - name: download latest verson of tomcat
   unarchive:
-    src:
-    dest:
+    src: {{TOMCAT_URL}}
+    dest: {{APP_HOME}}
+    remote_src: yes

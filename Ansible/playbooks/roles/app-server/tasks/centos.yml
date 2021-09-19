@@ -2,3 +2,12 @@
   package:
     name: java
     state: present
+
+- name: Create Application USer
+  user:
+    name: {{APP_USER}}
+
+- name: download latest verson of tomcat
+  unarchive:
+    src:
+    dest:

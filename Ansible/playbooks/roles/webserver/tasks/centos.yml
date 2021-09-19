@@ -1,4 +1,24 @@
 - name: Install web-server
   package:
-        name: httpd
-        state: present
+    name: httpd
+    state: present
+  notify: Restart httpd
+
+- name: Copy Proxy config
+  copy:
+    src: app-proxy.conf
+    dest: /etc/httpd/conf.d/app-proxy.conf
+  notify: Restart httpd
+
+- name: Download default index file
+  get_url:
+    url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
+    dest: /var/www/html/index.html
+
+- name: Start the httpd
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+
+

@@ -14,15 +14,32 @@
     dest: "{{APP_HOME}}"
     remote_src: yes
   become_user: "{{APP_USER}}"
+  notify: restart tomcat
 
 - name: download student app
   get_url:
     url: "{{WAR_URL}}"
     dest: {{TOMCAT_HOME}}/webapps/student.war
   become_user: "{{APP_USER}}"
+  notify: restart tomcat
 
 - name: download jdbc driver
   get_url:
     url: "{{JAR_URL}}"
     dest: {{TOMCAT_HOME}}/lib/mysql-connector.jar
   become_user: "{{APP_USER}}"
+  notify: restart tomcat
+
+- name: Download tomcat init script
+  get_url:
+    url: "{{TOMCAT_INIT_SCRIPT}}"
+    dest: /etc/init.d/tomcat
+    mode: '0755'
+    notify: daemon reload
+
+- name: start tomcat service
+  service:
+    name: tomcat
+    state: started
+    enabled: yes
+

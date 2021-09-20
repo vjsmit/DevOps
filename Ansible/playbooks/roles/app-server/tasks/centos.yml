@@ -6,9 +6,21 @@
 - name: Create Application USer
   user:
     name: {{APP_USER}}
+  
 
 - name: download latest verson of tomcat
   unarchive:
     src: {{TOMCAT_URL}}
     dest: {{APP_HOME}}
     remote_src: yes
+  become_user: "{{APP_USER}}"
+
+- name: download student app
+  get_url:
+    url: {{WAR_URL}}
+    dest: {{TOMCAT_HOME}}/webapps/student.war
+
+- name: download jdbc driver
+  get_url:
+    url: {{JAR_URL}}
+    dest: {{TOMCAT_HOME}}/lib/mysql-connector.jar

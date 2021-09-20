@@ -2,4 +2,6 @@ APP_USER: student
 APP_HOME: "/home/{{APP_USER}}"
 TOMCAT_VER: curl -s "https://archive.apache.org/dist/tomcat/tomcat-8/?C=M;O=A" | grep folder.gif | tail -1 | awk '{print $5}' | awk -F '"' '{print $2}' | sed -e 's|v||' -e 's|/||'
 TOMCAT_URL: https://archive.apache.org/dist/tomcat/tomcat-8/v{{TOMCAT_VER}}/bin/apache-tomcat-{{TOMCAT_VER}}.tar.gz 
-           
+TOMCAT_HOME: "{{APP_HOME}}/apache-tomcat-{{TOMCAT_VER}}"
+WAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
+JAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar

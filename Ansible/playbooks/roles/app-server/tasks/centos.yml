@@ -38,16 +38,16 @@
   notify: Restart Tomcat
 
 
-- name: Download tomcat init script
-  get_url:
-    url: "{{TOMCAT_INIT_SCRIPT}}"
-    dest: /etc/init.d/tomcat
-    mode: '0755'
-    notify: daemon reload
+# - name: Download tomcat init script
+#   get_url:
+#     url: "{{TOMCAT_INIT_SCRIPT}}"
+#     dest: /etc/init.d/tomcat
+#     mode: '0755'
+#     notify: daemon reload
 
-- name: start tomcat service
-  service:
-    name: tomcat
-    state: started
-    enabled: yes
+# - name: start tomcat service
+#   service:
+#     name: tomcat
+#     state: started
+#     enabled: yes
 

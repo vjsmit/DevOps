@@ -30,6 +30,14 @@
   become_user: "{{APP_USER}}"
   notify: restart tomcat
 
+- name: Copy context.xml file 
+  template:
+    src: context.xml
+    dest: "{{TOMCAT_HOME}}/conf/context.xml"
+  become_user: "{{APP_USER}}"
+  notify: Restart Tomcat
+
+
 - name: Download tomcat init script
   get_url:
     url: "{{TOMCAT_INIT_SCRIPT}}"

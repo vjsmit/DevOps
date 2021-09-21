@@ -4,3 +4,6 @@ node3.devops1.int ansible_user=ubuntu
 
 #[all:vars]
 #URL=group.google.com
+
+[centos]
+node1.devops1.int ansible_user=centos

@@ -1,5 +1,5 @@
 - name: Install web-server and app-server
-  hosts: all
+  hosts: centos
   become: yes
   roles:
     - webserver

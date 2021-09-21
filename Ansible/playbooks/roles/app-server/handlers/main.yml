@@ -4,4 +4,4 @@
     state: restarted
 
 - name: daemon reload
-  command: systemctl daemon-reload
+  shell: systemctl daemon-reload

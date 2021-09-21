@@ -3,5 +3,5 @@
     name: tomcat
     state: restarted
 
--name: daemon reload
+- name: daemon reload
  command: systemctl daemon-reload

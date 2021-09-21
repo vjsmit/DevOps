@@ -35,7 +35,7 @@
     src: context.xml
     dest: "{{TOMCAT_HOME}}/conf/context.xml"
   become_user: "{{APP_USER}}"
-  notify: restart Tomcat
+  notify: restart tomcat
 
 
 # - name: Download tomcat init script

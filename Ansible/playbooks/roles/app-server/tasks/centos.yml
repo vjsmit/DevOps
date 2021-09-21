@@ -26,7 +26,7 @@
 - name: download jdbc driver
   get_url:
     url: "{{JAR_URL}}"
-    dest: {{TOMCAT_HOME}}/lib/mysql-connector.jar
+    dest: "{{TOMCAT_HOME}}/lib/mysql-connector.jar"
   become_user: "{{APP_USER}}"
   notify: restart tomcat
 

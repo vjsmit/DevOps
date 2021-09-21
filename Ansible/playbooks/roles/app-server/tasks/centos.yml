@@ -14,14 +14,14 @@
     dest: "{{APP_HOME}}"
     remote_src: yes
   become_user: "{{APP_USER}}"
-  notify: restart tomcat
+  #notify: restart tomcat
 
 - name: download student app
   get_url:
     url: "{{WAR_URL}}"
     dest: "{{TOMCAT_HOME}}/webapps/student.war"
   become_user: "{{APP_USER}}"
-  notify: restart tomcat
+  #notify: restart tomcat
 
 - name: download jdbc driver
   get_url:

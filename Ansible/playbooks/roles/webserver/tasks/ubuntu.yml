@@ -1,3 +1,5 @@
-- name: Print Hello
-  debug:
-    msg: "Hello from Ubuntu"
+- name: Update repos
+  apt:
+    name: apache2
+    state: installed
+    update_cache: yes

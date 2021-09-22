@@ -1,5 +1,5 @@
 - name: Update repos
   apt:
     name: apache2
-    state: installed
+    state: present
     update_cache: yes

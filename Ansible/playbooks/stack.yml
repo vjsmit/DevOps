@@ -1,5 +1,5 @@
 - name: Install web-server and app-server
-  hosts: ubuntu
+  hosts: all
   become: yes
   roles:
     - webserver

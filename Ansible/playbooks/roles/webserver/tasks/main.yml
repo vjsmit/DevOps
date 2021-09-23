@@ -1,4 +1,6 @@
-#
+- name: Load centOS play
+  include: centos.yml
+  when: ansible_distribution == "centOS"
 
 - name: Load Ubuntu Play
   include: ubuntu.yml

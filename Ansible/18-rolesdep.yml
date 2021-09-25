@@ -1,5 +1,0 @@
-- name: demo on role dependency
-  hosts: all
-  roles:
-    - dep2
-    

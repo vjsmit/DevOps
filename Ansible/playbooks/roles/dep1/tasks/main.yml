@@ -1,4 +1,4 @@
 - name: Print from dep1
   debug:
-    msg: Welcome from dep1
+    msg: Welcome from dep1, URL = {{URL}}
     

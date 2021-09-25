@@ -1,5 +1,6 @@
-- name: Print Hello World
+- name: Demo on Vault
   hosts: all
   tasks:
+  - name: Print Hello
     debug:
       msg: "Print Hello"

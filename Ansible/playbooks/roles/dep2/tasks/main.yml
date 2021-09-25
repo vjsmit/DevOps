@@ -1,0 +1,4 @@
+- name: Print from dep2
+  debug:
+    msg: Welcome from dep2
+    
